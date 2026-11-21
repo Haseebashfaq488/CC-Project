@@ -1,0 +1,26 @@
+sun yaar {
+    rakh yaar number n = 7;
+    rakh yaar number first = 0;
+    rakh yaar number second = 1;
+    rakh yaar number next = 0;
+
+    bol yaar("--- Fibonacci Sequence ---");
+
+    ghoom yaar (rakh yaar number i = 1; i <= n; i = i + 1) {
+        agar yaar (i == 1) {
+            bol yaar(first);
+            agay chal yaar;
+        }
+        agar yaar (i == 2) {
+            bol yaar(second);
+            agay chal yaar;
+        }
+
+        next = first + second;
+        first = second;
+        second = next;
+
+        bol yaar(next);
+    }
+}
+khatam yaar

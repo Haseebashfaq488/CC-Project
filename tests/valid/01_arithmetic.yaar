@@ -1,0 +1,24 @@
+sun yaar {
+    // Variable Declarations & Data Types
+    rakh yaar number a = 25;
+    rakh yaar number b = 4;
+    rakh yaar float pi = 3.14159;
+    rakh yaar char symbol = 'Y';
+    rakh yaar string greeting = "Welcome to YaarLang!";
+    rakh yaar bool isValid = pakka;
+
+    // Arithmetic Operations
+    rakh yaar number sum = a + b;
+    rakh yaar number diff = a - b;
+    rakh yaar number prod = a * b;
+    rakh yaar number quot = a / b;
+    rakh yaar number rem = a % b;
+
+    bol yaar(greeting);
+    bol yaar(sum);
+    bol yaar(diff);
+    bol yaar(prod);
+    bol yaar(quot);
+    bol yaar(rem);
+}
+khatam yaar

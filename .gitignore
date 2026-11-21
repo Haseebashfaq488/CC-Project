@@ -8,12 +8,17 @@ build/
 
 # Flex and Bison generated files
 src/frontend/lex.yy.c
+src/frontend/lex.yy.cpp
 src/frontend/parser.tab.c
+src/frontend/parser.tab.cpp
 src/frontend/parser.tab.h
+src/frontend/parser.tab.hpp
 src/frontend/parser.output
 *.lex.c
 *.tab.c
 *.tab.h
+*.tab.cpp
+*.tab.hpp
 
 # OS and IDE files
 .DS_Store

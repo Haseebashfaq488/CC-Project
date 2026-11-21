@@ -1,0 +1,19 @@
+sun yaar {
+    // Array declaration using list yaar
+    list yaar number arr[5];
+
+    arr[0] = 10;
+    arr[1] = 20;
+    arr[2] = 30;
+    arr[3] = 40;
+    arr[4] = 50;
+
+    rakh yaar number total = 0;
+    ghoom yaar (rakh yaar number i = 0; i < 5; i = i + 1) {
+        total = total + arr[i];
+    }
+
+    bol yaar("Sum of array elements:");
+    bol yaar(total);
+}
+khatam yaar

@@ -1,0 +1,6 @@
+sun yaar {
+    // Unclosed if block
+    agar yaar (5 > 2) {
+        bol yaar("Missing closing brace");
+}
+khatam yaar

@@ -1,0 +1,38 @@
+sun yaar {
+    rakh yaar char op = '+';
+    rakh yaar number x = 50;
+    rakh yaar number y = 20;
+    rakh yaar number ans = 0;
+
+    // Selection Statement: dekh yaar with sardi & garmi
+    dekh yaar (op) {
+        sardi '+':
+            ans = x + y;
+            bol yaar("Addition performed!");
+            bas kar yaar;
+
+        sardi '-':
+            ans = x - y;
+            bol yaar("Subtraction performed!");
+            bas kar yaar;
+
+        sardi '*':
+            ans = x * y;
+            bol yaar("Multiplication performed!");
+            bas kar yaar;
+
+        sardi '/':
+            agar yaar (y != 0) {
+                ans = x / y;
+            } warna {
+                bol yaar("Zero division error!");
+            }
+            bas kar yaar;
+
+        garmi:
+            bol yaar("Default case reached: Unknown operator!");
+    }
+
+    bol yaar(ans);
+}
+khatam yaar

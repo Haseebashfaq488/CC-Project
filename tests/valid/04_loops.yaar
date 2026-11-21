@@ -1,0 +1,30 @@
+sun yaar {
+    // 1. For Loop: ghoom yaar
+    bol yaar("--- For Loop Test ---");
+    ghoom yaar (rakh yaar number i = 1; i <= 5; i = i + 1) {
+        agar yaar (i == 3) {
+            agay chal yaar; // continue
+        }
+        bol yaar(i);
+    }
+
+    // 2. While Loop: jab tak yaar
+    bol yaar("--- While Loop Test ---");
+    rakh yaar number count = 5;
+    jab tak yaar (count > 0) {
+        bol yaar(count);
+        count = count - 1;
+        agar yaar (count == 2) {
+            bas kar yaar; // break
+        }
+    }
+
+    // 3. Do-While Loop: chala yaar ... jab tak yaar
+    bol yaar("--- Do-While Loop Test ---");
+    rakh yaar number k = 1;
+    chala yaar {
+        bol yaar(k);
+        k = k + 1;
+    } jab tak yaar (k <= 3);
+}
+khatam yaar

@@ -1,0 +1,26 @@
+sun yaar {
+    // Function declarations
+    jugaad number add(number a, number b) {
+        de yaar a + b;
+    }
+
+    jugaad bool isEven(number n) {
+        agar yaar (n % 2 == 0) {
+            de yaar pakka;
+        } warna {
+            de yaar topi;
+        }
+    }
+
+    // Function calls
+    rakh yaar number res = add(15, 25);
+    bol yaar(res);
+
+    rakh yaar bool check = isEven(res);
+    agar yaar (check == pakka) {
+        bol yaar("Number is Even!");
+    } warna {
+        bol yaar("Number is Odd!");
+    }
+}
+khatam yaar

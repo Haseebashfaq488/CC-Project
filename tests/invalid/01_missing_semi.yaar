@@ -1,0 +1,6 @@
+sun yaar {
+    // Missing semicolon on declaration
+    rakh yaar number x = 10
+    bol yaar(x);
+}
+khatam yaar

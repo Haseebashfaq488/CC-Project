@@ -1,0 +1,25 @@
+sun yaar {
+    rakh yaar number marks = 85;
+
+    // Conditionals: agar yaar, warna agar, warna
+    agar yaar (marks >= 80) {
+        bol yaar("Grade: A - Scene Full On!");
+    } warna agar (marks >= 60) {
+        bol yaar("Grade: B - Theek Thak!");
+    } warna agar (marks >= 50) {
+        bol yaar("Grade: C - Pass hogaye!");
+    } warna {
+        bol yaar("Grade: F - Supply agayi!");
+    }
+
+    // Nested If-Else with Logical Operators
+    rakh yaar number age = 19;
+    rakh yaar bool hasCNIC = pakka;
+
+    agar yaar (age >= 18 && hasCNIC == pakka) {
+        bol yaar("Vote de sakte ho!");
+    } warna {
+        bol yaar("Abhi vote nahi de sakte.");
+    }
+}
+khatam yaar
