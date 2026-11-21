@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Wextra -Isrc -Isrc/frontend -Isrc/ast -Isrc/semantics -Isrc/ir
+CXXFLAGS = -std=c++17 -Wall -Wextra -Isrc -Isrc/frontend -Isrc/ast -Isrc/semantics -Isrc/ir -Isrc/optimizer -Isrc/backend
 FLEX = flex
 BISON = bison
 
@@ -9,6 +9,8 @@ FRONTEND_DIR = src/frontend
 AST_DIR = src/ast
 SEMANTICS_DIR = src/semantics
 IR_DIR = src/ir
+OPTIMIZER_DIR = src/optimizer
+BACKEND_DIR = src/backend
 
 TARGET = $(BIN_DIR)/yaarc
 
@@ -21,6 +23,10 @@ SRCS = $(SRC_DIR)/main.cpp \
        $(SEMANTICS_DIR)/symbol_table.cpp \
        $(SEMANTICS_DIR)/semantic_analyzer.cpp \
        $(IR_DIR)/tac_generator.cpp \
+       $(OPTIMIZER_DIR)/basic_block.cpp \
+       $(OPTIMIZER_DIR)/optimizer.cpp \
+       $(BACKEND_DIR)/mips_codegen.cpp \
+       $(BACKEND_DIR)/vm_engine.cpp \
        $(PARSER_SRC) \
        $(LEXER_SRC)
 
