@@ -11,6 +11,9 @@
 
 **`YaarLang`** is a complete, multi-stage educational compiler written in standard C++17 with Flex and Bison. Inspired by Bhailang, it brings authentic Pakistani student slang (`sun yaar`, `khatam yaar`, `bol yaar`, `dekh yaar`, `sardi`, `garmi`, `jugaad`, `pakka`, `topi`) into a strongly typed, block-scoped C-family language.
 
+### 🌐 Interactive Web Workbench & Playground
+A minimalist, animated single-page web app with a Three.js 3D background is available in [`web/index.html`](web/index.html). It runs pure client-side in any browser with zero setup, allowing live in-browser execution, AST inspection, TAC quadruples, optimization metrics, and MIPS32 assembly viewing.
+
 ### Supported Language Features (All 11 Mandatory Constructs)
 1. **Data Types:** `number` (32-bit int), `float` (64-bit float), `char`, `string`, `bool` (`pakka` / `topi`)
 2. **Variables:** Declaration (`rakh yaar`), initialization, and assignment

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YaarLang Compiler Workbench</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Three.js CDN for lightweight ambient 3D visuals -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <canvas id="three-canvas"></canvas>
+
+    <div class="site-container">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="brand-wrapper">
+                <span class="brand-title">YaarLang</span>
+                <span class="badge-version">v1.0.0</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#workbench" class="nav-link">Playground</a>
+                <a href="#matrix" class="nav-link">Language Matrix</a>
+                <a href="https://github.com/Haseebashfaq488/CC-Project" target="_blank" class="nav-link">GitHub ↗</a>
+            </nav>
+        </header>
+
+        <!-- Compact Hero Banner -->
+        <section class="hero-section">
+            <span class="hero-tag">CS 4031 Compiler Construction</span>
+            <h1 class="hero-heading">Educational Compiler with Colloquial Lexicon</h1>
+            <p class="hero-subtitle">
+                A statically typed C-family language featuring an end-to-end multi-stage compiler: AST, Scoped Symbol Tables, Three-Address Code, Optimization passes, and MIPS32 codegen.
+            </p>
+        </section>
+
+        <!-- Split-Pane Workbench -->
+        <section id="workbench" class="workbench-section">
+            <div class="workbench-card">
+                <!-- Toolbar -->
+                <div class="workbench-toolbar">
+                    <div class="toolbar-controls">
+                        <select id="sample-select" class="sample-selector">
+                            <option value="fibonacci">01: Fibonacci Sequence</option>
+                            <option value="calculator">02: Calculator (sardi & garmi)</option>
+                            <option value="even_odd">03: Even or Odd Checker</option>
+                            <option value="arrays">04: Array Sum (list yaar)</option>
+                            <option value="functions">05: Functions (jugaad, pakka & topi)</option>
+                        </select>
+                        <button id="btn-reset" class="btn-secondary">Reset</button>
+                    </div>
+                    <button id="btn-run" class="btn-primary">
+                        <span>▶</span> Chalao (Run)
+                    </button>
+                </div>
+
+                <!-- Split Panes -->
+                <div class="split-panes">
+                    <!-- Left: Source Editor -->
+                    <div class="pane-editor">
+                        <div id="line-numbers" class="editor-line-numbers">1</div>
+                        <textarea id="code-editor" class="editor-textarea" spellcheck="false"></textarea>
+                    </div>
+
+                    <!-- Right: Diagnostics Deck -->
+                    <div class="pane-diagnostics">
+                        <div class="deck-tabs">
+                            <button class="tab-btn active" data-tab="terminal">Terminal Output</button>
+                            <button class="tab-btn" data-tab="ast">AST Tree</button>
+                            <button class="tab-btn" data-tab="tac">TAC (IR)</button>
+                            <button class="tab-btn" data-tab="opt">Optimization</button>
+                            <button class="tab-btn" data-tab="mips">MIPS32 Assembly</button>
+                        </div>
+                        <div id="deck-content" class="deck-content">Compiling...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compact Language Matrix -->
+        <section id="matrix" class="matrix-section">
+            <div class="section-header">
+                <h2 class="section-title">Language Construct Matrix</h2>
+                <p class="section-subtitle">Summary of the 11 mandatory semester project features and their corresponding YaarLang syntax.</p>
+            </div>
+
+            <div class="matrix-table-wrapper">
+                <table class="matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Construct Category</th>
+                            <th>YaarLang Syntax</th>
+                            <th>C++ Equivalent</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Program Boundary</td>
+                            <td><span class="code-token">sun yaar { ... } khatam yaar</span></td>
+                            <td><code>int main() { ... }</code></td>
+                            <td>Enclosing block for the entire program</td>
+                        </tr>
+                        <tr>
+                            <td>Data Types</td>
+                            <td><span class="code-token">number, float, char, string, bool</span></td>
+                            <td><code>int, double, char, string, bool</code></td>
+                            <td>Standard static primitive types</td>
+                        </tr>
+                        <tr>
+                            <td>Booleans</td>
+                            <td><span class="code-token">pakka / topi</span></td>
+                            <td><code>true / false</code></td>
+                            <td>Logical boolean literals</td>
+                        </tr>
+                        <tr>
+                            <td>Variable Declaration</td>
+                            <td><span class="code-token">rakh yaar &lt;type&gt; &lt;id&gt; = &lt;expr&gt;;</span></td>
+                            <td><code>int x = 10;</code></td>
+                            <td>Scoped variable declaration & initialization</td>
+                        </tr>
+                        <tr>
+                            <td>Console Output</td>
+                            <td><span class="code-token">bol yaar(expr);</span></td>
+                            <td><code>std::cout &lt;&lt; expr;</code></td>
+                            <td>Standard output print statement</td>
+                        </tr>
+                        <tr>
+                            <td>Console Input</td>
+                            <td><span class="code-token">puch yaar(id);</span></td>
+                            <td><code>std::cin &gt;&gt; id;</code></td>
+                            <td>Standard input read statement</td>
+                        </tr>
+                        <tr>
+                            <td>Conditionals</td>
+                            <td><span class="code-token">agar yaar (...) { } warna { }</span></td>
+                            <td><code>if (...) { } else { }</code></td>
+                            <td>Structured branching with brackets</td>
+                        </tr>
+                        <tr>
+                            <td>Selection Statement</td>
+                            <td><span class="code-token">dekh yaar (...) { sardi: ... garmi: }</span></td>
+                            <td><code>switch (...) { case: default: }</code></td>
+                            <td>Multi-way branch with break</td>
+                        </tr>
+                        <tr>
+                            <td>Iteration Loops</td>
+                            <td><span class="code-token">ghoom yaar / jab tak yaar / chala yaar</span></td>
+                            <td><code>for / while / do-while</code></td>
+                            <td>Full loop family with break & continue</td>
+                        </tr>
+                        <tr>
+                            <td>Functions & Return</td>
+                            <td><span class="code-token">jugaad &lt;type&gt; func() { de yaar x; }</span></td>
+                            <td><code>type func() { return x; }</code></td>
+                            <td>Function declaration and value return</td>
+                        </tr>
+                        <tr>
+                            <td>Arrays</td>
+                            <td><span class="code-token">list yaar &lt;type&gt; arr[&lt;size&gt;];</span></td>
+                            <td><code>type arr[size];</code></td>
+                            <td>Fixed-size array indexing</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Minimalist Footer -->
+        <footer class="site-footer">
+            <p>CS 4031 Compiler Construction Semester Project • FAST-NUCES (Faisalabad-Chiniot Campus)</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/samples.js"></script>
+    <script src="js/yaarlang_runtime.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/three_bg.js"></script>
+</body>
+</html>
