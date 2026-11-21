@@ -1,0 +1,5 @@
+sun yaar {
+    // Type mismatch: assigning string into number
+    rakh yaar number age = "Chawal Maar Di";
+}
+khatam yaar

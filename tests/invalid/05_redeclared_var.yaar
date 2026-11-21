@@ -1,0 +1,6 @@
+sun yaar {
+    // Variable redeclaration in same scope
+    rakh yaar number count = 10;
+    rakh yaar number count = 20;
+}
+khatam yaar

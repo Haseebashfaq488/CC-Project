@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <cstring>
 #include "parser.tab.hpp"
 
 extern int yylineno;

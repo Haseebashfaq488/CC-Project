@@ -1,0 +1,6 @@
+sun yaar {
+    // Undeclared variable access
+    rakh yaar number a = 10;
+    a = b + 5;
+}
+khatam yaar
